@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manoonChange</title>
+</head>
+<body>
+    <textarea id="area" cols="30" rows="10" readonly autofocus style="resize:none;" ></textarea>
+    <br><button onclick="copy()">click me</button>
+    <script>
+        const keys = {
+            a:"ง",
+            s:"เ",
+            d:"ร",
+            f:"น"
+        }
+        const textarea = document.getElementById("area")
+        textarea.value = "hello"
+        textarea.addEventListener("keypress",()=>{
+            // check <enter> key
+            if (event.key=="Enter"){
+                copy()
+                textarea.value=""
+                return
+            }
+            
+            // use for remove last char
+            // textarea.value = textarea.value.slice(0,textarea.value.length-1)
+
+            // append text with compaired key
+            textarea.value += keys[event.key]
+            console.log(event.key)
+        })
+
+        function copy(){
+            textarea.select()
+            navigator.clipboard.writeText(textarea.value)
+        }
+    </script>
+</body>
+</html>
