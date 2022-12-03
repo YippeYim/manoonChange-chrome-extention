@@ -1,11 +1,7 @@
-const keys = {
-    a:"ง",
-    s:"เ",
-    d:"ร",
-    f:"น"
-}
+import { myKeys } from "./key.js"
+
 const textarea = document.getElementById("area")
-textarea.value = "hello"
+
 textarea.addEventListener("keypress",(event)=>{
     // check <enter> key
     if (event.key=="Enter"){
@@ -16,14 +12,13 @@ textarea.addEventListener("keypress",(event)=>{
     
     // if +,= pressed => del last char
     if (event.key == "+" || event.key == "="){
-        // use for remove last char
+        // remove last char
         textarea.value = textarea.value.slice(0,textarea.value.length-1)
         return
     }
 
     // append text with compaired key
-    textarea.value += keys[event.key]
-    console.log(event.key)
+    textarea.value += myKeys[event.key]
 })
 
 function copy(){
