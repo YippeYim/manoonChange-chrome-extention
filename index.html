@@ -7,22 +7,47 @@
     <title>manoonChange</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Niramit:wght@200&display=swap" rel="stylesheet">
     <style>
+        :root{
+            --bgcolor: rgb(244, 244, 244);
+            --darkercolor:rgb(203, 203, 203);
+            --lightercolor: rgb(248, 248, 248);
+            --fontcolor:rgb(0, 0, 0);
+        }
         *{
             font-family:"Niramit";
+            color:var(--fontcolor);
+        }
+        body{
+            background-color:var(--bgcolor);
+        }
+        p{
+            margin-left:10px;
+            margin-bottom:0px;
         }
         textarea{
+            background-color:var(--darkercolor);
+            text-shadow: white;
             font-size:17px;
             padding-left:7px;
+            border-radius:15px;
         }
         textarea:focus{
+            background-color: var(--lightercolor);
             text-decoration-line: underline;
             text-underline-offset: 7px;
+        }
+        button{
+            border-radius: 14px;
+            background-color: var(--bgcolor);
+            border:1px solid var(--fontcolor);
+            margin-bottom:5px;
         }
     </style>
 </head>
 <body>
-    <p>press Enter to copy</p>
-    <textarea id="area" cols="30" rows="10" readonly autofocus style="resize:none;" placeholder="type here..."></textarea>
+    <button id="switch">l/d mode</button><p style="display:inline-block">press Enter to copy</p><br>
+    <textarea id="area" cols="30" rows="7" readonly autofocus style="resize:none;" placeholder="type here..."></textarea>
+
 
     <script type="module" src="app.js"></script>
 </body>
