@@ -10,15 +10,17 @@ textarea.addEventListener("keypress",(event)=>{
         return
     }
     
-    // if +,= pressed => del last char
-    if (event.key == "+" || event.key == "="){
+    // append text with compaired key
+    textarea.value += myKeys[event.key]
+})
+
+textarea.addEventListener("keydown",(event)=>{
+    // if <Backspace> pressed => del last char
+    if (event.key == "Backspace"){
         // remove last char
         textarea.value = textarea.value.slice(0,textarea.value.length-1)
         return
     }
-
-    // append text with compaired key
-    textarea.value += myKeys[event.key]
 })
 
 function copy(){
