@@ -5,10 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>manoonChange</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Niramit:wght@200&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family:"Niramit";
+        }
+        textarea{
+            font-size:17px;
+            padding-left:7px;
+        }
+        textarea:focus{
+            text-decoration-line: underline;
+            text-underline-offset: 7px;
+        }
+    </style>
 </head>
 <body>
+    <p>press Enter to copy</p>
     <textarea id="area" cols="30" rows="10" readonly autofocus style="resize:none;" placeholder="type here..."></textarea>
-    <br><button onclick="copy()">click me</button>
 
     <script type="module" src="app.js"></script>
 </body>
