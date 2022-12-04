@@ -1,7 +1,6 @@
 # ManoonChange
 
-This extension is make for my problem. It's I can't install other keyboard layout on school's computer, that make me so anoying to type.
-
+This extension is made for my problem. It's because I can't install other keyboard layouts on the school's computer, which make me so annoying to type.
 
 ## Table of contents
 
