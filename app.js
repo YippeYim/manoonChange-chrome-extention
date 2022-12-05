@@ -10,6 +10,12 @@ textarea.addEventListener("keypress",(event)=>{
         return
     }
     
+    // check if key undefined
+    if (myKeys[event.key] == undefined){
+        textarea.value += event.key
+        return
+    }
+
     // append text with compaired key
     textarea.value += myKeys[event.key]
 })
