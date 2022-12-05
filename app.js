@@ -12,7 +12,9 @@ textarea.addEventListener("keypress",(event)=>{
     
     // check if key undefined
     if (myKeys[event.key] == undefined){
-        textarea.value += event.key
+        if (event.key.length == 1){
+            textarea.value += event.key
+        }
         return
     }
 
