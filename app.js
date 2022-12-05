@@ -2,6 +2,7 @@ import { myKeys } from "./key.js"
 
 const textarea = document.getElementById("area")
 
+
 textarea.addEventListener("keypress",(event)=>{
     // check <enter> key
     if (event.key=="Enter"){
@@ -43,9 +44,32 @@ let bgcolor,
     lightercolor,
     fontcolor
 
-const btn = document.getElementById('switch')
+// load data from localStorage
+window.addEventListener("load",()=>{
+    // skip load if in first time
+    if(!localStorage.getItem("theme")){
+        return
+    }else{
+        // update isDarkMode Var
+        if (localStorage.getItem("theme") == "dark"){
+            isDarkMode = true
+        }else{
+            isDarkMode = false
+        }
 
-btn.addEventListener("click",()=>{
+        // update theme
+        setTheme()
+    }
+})
+
+
+function switchMode(){
+    isDarkMode = !isDarkMode
+    setTheme()
+}
+
+function setTheme(){
+    // set theme
     if(isDarkMode){
         bgcolor="rgb(244, 244, 244)"
         darkercolor="rgb(203, 203, 203)"
@@ -63,5 +87,12 @@ btn.addEventListener("click",()=>{
     document.documentElement.style.setProperty('--darkercolor',darkercolor)
     document.documentElement.style.setProperty('--lightercolor',lightercolor)
     document.documentElement.style.setProperty('--fontcolor',fontcolor)
-    isDarkMode = !isDarkMode
-})
+    
+    // save theme to localStorage
+    localStorage.setItem("theme",(isDarkMode ? "dark" : "light"))
+}
+
+
+const btn = document.getElementById('switch')
+
+btn.addEventListener("click",switchMode)
