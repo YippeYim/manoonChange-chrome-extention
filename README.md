@@ -108,3 +108,4 @@ This extension is made for my problem. It's because I can't install other keyboa
     ```js
     document.documentElement.style.setProperty('--myColor','black')
     ```
+- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
