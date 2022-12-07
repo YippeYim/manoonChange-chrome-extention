@@ -23,7 +23,7 @@ This extension is made for my problem. It's because I can't install other keyboa
 
 ### links
 
-*in progress: begging mom for money.*
+**Chrome web store:** *in progress: begging mom for money.*
 
 <br>
 
