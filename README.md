@@ -1,5 +1,9 @@
 # ManoonChange
 
+<p align="center">
+  <img src="mygif.gif" alt="animated" width=300 />
+</p>
+
 This extension is made for my problem. It's because I can't install other keyboard layouts on the school's computer, which make me so annoying to type.
 
 ## Table of contents
